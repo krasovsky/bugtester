@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+  <style>
+    .bugged {
+      transition: height 2s;
+      -moz-transition: height 2s; /* Firefox 4 */
+      -webkit-transition: height 2s; /* Safari and Chrome */
+      -o-transition: height 2s; /* Opera */
+    }
+  </style>
+  
+  <script type="application/javascript">
+    function doAction() {
+      document.getElementById('testDiv').style.height = '200px';
+    }
+  </script>    
     
   </head>
   <body>
+    <div style="background:blue; height:400px; width:200px" onclick="doAction();"></div>
   
-  Hello
   </body>
 </html>
